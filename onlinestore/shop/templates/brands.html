@@ -1,0 +1,5 @@
+{% for brand in brands %}
+    <a class="navbar-item" href="{% url 'shop:products' %}?brand={{ brand.pk }}">
+    {{ brand }}
+    </a>
+{% endfor %}

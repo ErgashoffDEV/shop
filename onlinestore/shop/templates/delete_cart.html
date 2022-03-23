@@ -1,0 +1,12 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+    <form method="post" class="site-form has-background-light">
+        {% csrf_token %}
+        <p class="content is-size-4 pt-3 pb-4 has-text-centered">Are you sure to delete this cart item?</p>
+        <div class="has-text-centered">
+            <button  type="submit" class="button is-primary mb-4">Confirm</button>
+            <a href="{% url 'shop:cart' %}" class='button is-danger'>Cancel</a>
+        </div>
+    </form>
+{% endblock %}
